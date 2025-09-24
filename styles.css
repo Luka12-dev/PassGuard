@@ -1,0 +1,24 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#9aa4b2;
+  --good:#38bdf8;
+  --warn:#f59e0b;
+  --bad:#fb7185;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,system-ui,-apple-system,Roboto,Arial;background:linear-gradient(180deg,#071126,#0b1220);color:#e6eef6}
+.container{max-width:780px;margin:36px auto;padding:20px}
+h1{margin:0 0 18px;font-size:28px}
+.card{background:rgba(255,255,255,0.03);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+input[type="password"], input[type="text"], input[readonly]{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:inherit;margin-top:8px}
+.strength-bar{height:12px;background:rgba(255,255,255,0.03);border-radius:8px;margin-top:12px;overflow:hidden}
+.strength-bar > div{height:100%;width:0;transition:width 250ms ease}
+.feedback{margin-top:10px;color:var(--muted);font-size:14px}
+.options{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+button{background:var(--accent);border:0;padding:10px 14px;border-radius:8px;color:#022;cursor:pointer;font-weight:600}
+button#copyBtn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);margin-left:8px}
+.footer{text-align:center;color:var(--muted);margin-top:6px;font-size:13px}
+.hint{display:block;color:var(--muted);margin-top:8px;font-size:13px}

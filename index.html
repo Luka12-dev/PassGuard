@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Password Strength Analyzer</h1>
+
+    <section class="card">
+      <label for="password">Enter Password</label>
+      <input id="password" type="password" placeholder="Enter password..." />
+      <div id="strengthBar" class="strength-bar"><div id="strengthFill"></div></div>
+      <div id="feedback" class="feedback">Enter a password to analyze.</div>
+    </section>
+
+    <section class="card">
+      <h2>Password Generator</h2>
+      <label for="length">Length (number of characters): <span id="lenVal">12</span></label>
+      <input id="length" type="range" min="4" max="64" value="12" />
+      <div class="options">
+        <label><input id="optLower" type="checkbox" checked /> a-z</label>
+        <label><input id="optUpper" type="checkbox" checked /> A-Z</label>
+        <label><input id="optDigits" type="checkbox" checked /> 0-9</label>
+        <label><input id="optSymbols" type="checkbox" checked /> !@#...</label>
+      </div>
+      <button id="generateBtn">Generate</button>
+      <input id="generated" readonly />
+      <button id="copyBtn">Copy</button>
+      <small class="hint">Generator creates a password exactly the length you choose - the longer, the stronger ✅</small>
+    </section>
+
+    <footer class="footer">Powered by HTML • CSS • JS • C • C++ → WASM</footer>
+  </main>
+
+  <script src="pw_wasm.js" defer></script>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
